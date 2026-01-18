@@ -1,1 +1,235 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cloud Wizards | Cloud Platform Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg-dark: #0b1220;
+      --bg-light: #111827;
+      --text-main: #e5e7eb;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --max-width: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* --- Intro --- */
+    .intro {
+      background: var(--bg-light);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    /* --- Image Row --- */
+    .image-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* --- Services --- */
+    .services {
+      background: #020617;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .service-item {
+      margin-bottom: 2rem;
+    }
+
+    .service-item p:last-child {
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* --- Posts --- */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    /* --- Reviews --- */
+    .reviews {
+      background: var(--bg-light);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .review-card {
+      background: #020617;
+      padding: 2rem;
+      border-radius: 16px;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .intro-grid,
+      .services-grid,
+      .posts-grid,
+      .reviews-grid,
+      .image-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container intro-grid">
+    <div>
+      <h2>About Cloud Wizards</h2>
+    </div>
+    <div>
+      <p>
+        Cloud Wizards helps teams turn ideas into production-grade systems
+        through automated pipelines, resilient architectures, and clear
+        governance across multi-cloud environments.
+      </p>
+    </div>
+  </div>
+
+  <div class="container image-row">
+    <img src="https://raysaini-veglw.wordpress.com/wp-content/uploads/2026/01/site-title-696cfbb6330b0.png" alt="Cloud architecture" />
+    <img src="https://raysaini-veglw.wordpress.com/wp-content/uploads/2026/01/site-title-696cfbb3e8511.png" alt="Kubernetes platform" />
+    <img src="https://raysaini-veglw.wordpress.com/wp-content/uploads/2026/01/site-title-696cfbb4ba393.png" alt="CI/CD pipeline" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container services-grid">
+    <div>
+      <h2>Cloud Services</h2>
+
+      <div class="service-item">
+        <h3>DevOps Platform</h3>
+        <p>
+          Architect resilient cloud pipelines, automate deployment and
+          monitoring, and unify DevOps, MLOps, and data engineering.
+        </p>
+        <p>Learn more →</p>
+      </div>
+
+      <div class="service-item">
+        <h3>MLOps Studio</h3>
+        <p>
+          Deliver scalable ML pipelines with reproducible experiments,
+          automated lineage, and secure cloud-native deployments.
+        </p>
+        <p>View details →</p>
+      </div>
+    </div>
+
+    <div>
+      <img src="https://raysaini-veglw.wordpress.com/wp-content/uploads/2026/01/site-title-696cfbb415abd.png" alt="Data engineering" />
+    </div>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section>
+  <div class="container">
+    <h2>Latest Posts</h2>
+    <div class="posts-grid">
+      <div>
+        <h3>Designing Scalable MLOps Platforms</h3>
+        <p>Jan 18, 2026</p>
+      </div>
+      <div>
+        <h3>Terraform Patterns for Multi-Cloud</h3>
+        <p>Jan 12, 2026</p>
+      </div>
+      <div>
+        <h3>Kubernetes Cost Optimization</h3>
+        <p>Jan 5, 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <h2 style="text-align:center;">Reviews</h2>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <h3>Aya Nakamura</h3>
+        <p>
+          “Cloud Wizards transformed our deployment cadence; we ship features
+          faster with fewer incidents.”
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Mateo García</h3>
+        <p>
+          “The platform is reliable, scalable, and easy to operate—our team
+          finally sleeps at night.”
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
